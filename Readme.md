@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/hK9g-dUi)
 ## **Overview**
 
 In this lab, you are provided with a working Flask API and web application. However, **it is deeply insecure.** Currently, it relies on a hardcoded "dummy" user, uses basic session cookies for API routes, and lacks strict data validation.
