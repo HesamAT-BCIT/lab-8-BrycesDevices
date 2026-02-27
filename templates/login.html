@@ -29,14 +29,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBY8XyVwOKHmG7VAihWAtTgwlY-R1buZac",
-            authDomain: "comp-7855---w6-lab.firebaseapp.com",
-            projectId: "comp-7855---w6-lab",
-            storageBucket: "comp-7855---w6-lab.firebasestorage.app",
-            messagingSenderId: "618734610483",
-            appId: "1:618734610483:web:c1352812335b798bc51b46"
-        };
+        const firebaseConfig = {apiKey: "{{ api_key }}"};
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);

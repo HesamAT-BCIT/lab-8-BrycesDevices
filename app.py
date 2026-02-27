@@ -186,7 +186,7 @@ def home():
 def login():
     """Login page."""
     if request.method == "GET":
-        return render_template("login.html")
+        return render_template("login.html", api_key=WEB_API_KEY)
 
     # Get Firebase ID token from header
     header = request.headers.get("Authorization", "")
@@ -261,19 +261,16 @@ def signup():
     if password != confirm_password:
         return render_template("signup.html", error="Passwords do not match")
 
-    # TODO: Create user with Firebase Admin SDK
     user = auth.create_user(
         email=email,
         password=password
     )
 
-    # TODO: Initialize profile in Firestore
     db.collection("user_profiles").document(user.uid).set({
         "email": email,
         "role": "user"
     })
 
-    # TODO: Redirect to login on success
     return render_template("login.html")
 
 
